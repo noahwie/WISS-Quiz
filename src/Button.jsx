@@ -1,14 +1,13 @@
-import { useState } from 'react'
 
-export default function Button() {
-    const [count, setCount] = useState(0)
+
+export default function Button(props) {
 
     return(
         <>
-        <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
+        <button className="button" onClick={props.handler}>
+            {props.label}
         </button>
         </>
-    )
+    );
 }
 
